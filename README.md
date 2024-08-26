@@ -12,6 +12,9 @@
    10  kubectl version
    11  kubectl version --output=yaml
    12  sudo /usr/local/bin/k3s-uninstall.sh
+```  
++ Installing Kubernetes
+```bash
    13  curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
    14  kubectl version
    15  export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
@@ -21,6 +24,9 @@
    19  export KUBECONFIG=~/.kube/config
    20  kubectl get nodes
    21  kubectl get pods --all-namespaces
+```  
++ Installing Helm
+```  bash
    22  kubectl version
    23  helm ls
    24  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
@@ -32,6 +38,9 @@
    30  helm repo update
    31  helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.10.1 --set installCRDs=true
    32  helm version
+```  
++ Install Cert manager
+```bash
    33  curl -L -o kubectl-cert-manager.tar.gz https://github.com/cert-manager/cert-manager/releases/download/v1.12.11/kubectl-cert_manager-linux-amd64.tar.gz
    34  tar xzf kubectl-cert-manager.tar.gz
    35  sudo mv kubectl-cert_manager /usr/local/bin
@@ -50,12 +59,13 @@
    48  kubectl get nodes
    49  kubectl get clusterissuers
    50  kubectl get all
+```  
++ Installing Caértificate
+```  bash
    51  mkdir -p /home/ubuntu/.rancher/k3s/server/tls/etcd/
    52  sudo cat /var/lib/rancher/k3s/server/tls/client-ca.crt > /home/ubuntu/.rancher/k3s/server/tls/etcd/client.crt
    53  sudo cat /var/lib/rancher/k3s/server/tls/client-ca.key > /home/ubuntu/.rancher/k3s/server/tls/etcd/client.key
    54  sudo apt-get update -y
    55  history
-   56  echo history>>history.txt
-   57  echo history>history.txt
    58  history > history.txt
-   ```  
+```  
