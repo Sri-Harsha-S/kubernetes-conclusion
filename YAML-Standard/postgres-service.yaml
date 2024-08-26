@@ -1,0 +1,13 @@
+# yaml-standard/postgres-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  namespace: standard
+spec:
+  selector:
+    app: postgres
+  ports:
+  - protocol: TCP
+    port: 5432
+    targetPort: 5432

@@ -1,0 +1,13 @@
+# yaml-standard/pgadmin-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgadmin
+  namespace: standard
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: pgadmin
+  type: NodePort
