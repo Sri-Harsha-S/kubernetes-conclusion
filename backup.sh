@@ -2,7 +2,7 @@
 
 BACKUP_DIR="/home/ubuntu/backups"
 TIMESTAMP=$(date +"%Y%m%d%H%M")
-BACKUP_FILE="$BACKUP_DIR/etcd-backup-$TIMESTAMP.tar.gz"
+BACKUP_FILE="$BACKUP_DIR/etcd-backup-$TIMESTAMP.db"
 
 mkdir -p $BACKUP_DIR
 

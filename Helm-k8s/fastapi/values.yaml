@@ -51,7 +51,7 @@ ingress:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: helmfastapi.course-datascientest.cloudns.ch
+    - host: standardyaml.course-datascientest.cloudns.ch
       paths:
         - path: /
           pathType: Prefix
@@ -63,7 +63,7 @@ ingress:
   tls:
     - secretName: fastapi-tls
       hosts:
-        - helmfastapi.course-datascientest.cloudns.ch
+        - standardyaml.course-datascientest.cloudns.ch
 
 resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
